@@ -27,7 +27,6 @@ export default function NatureMeditate() {
             Start your meditation practice today
           </Text>
         </View>
-      </AppGradient>
       <View>
         <FlatList
           data={MEDITATION_DATA}
@@ -57,6 +56,8 @@ export default function NatureMeditate() {
           )}
         />
       </View>
+      </AppGradient>
+
       <StatusBar style="light" />
     </View>
   );
