@@ -8,6 +8,7 @@ import beachImage from '@/assets/meditation-images/beach.webp'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomButton from '@/components/CustomButton';
 import { useRouter } from 'expo-router';
+import AppGradient from '@/components/AppGradient';
 
 const App = () => {
   const router = useRouter();
@@ -19,11 +20,10 @@ const App = () => {
         resizeMode='cover'
         className='flex-1'
       >
-        <LinearGradient
-          className='flex-1'
+        <AppGradient
           colors={["rgba(0, 0, 0, 0.4)", "rgba(0, 0, 0, 0.8)"]}
         >
-          <SafeAreaView className='flex-1 mx-5 my-8 justify-between'>
+          <SafeAreaView className='flex-1 px-1 justify-between'>
             <View>
             <Text className='text-center font-bold text-white text-4xl'>
               Simple Meditation
@@ -34,12 +34,12 @@ const App = () => {
             </View>
 
             <View>
-              <CustomButton onPress={() => router.push('/test')} title='Get Started' />
+              <CustomButton onPress={() => router.push('/nature-meditate')} title='Get Started' />
             </View>
 
             <StatusBar style="light" />
           </SafeAreaView>
-        </LinearGradient>
+        </AppGradient>
       </ImageBackground>
     </View>
   )
